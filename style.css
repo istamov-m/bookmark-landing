@@ -1,0 +1,321 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: Rubik;
+}
+
+
+.bg-decor {
+    position: absolute;
+    width: 40rem;
+    height: 25rem;
+    right: 0;
+    top: 18rem;
+    background-color: hsl(231, 69%, 60%);
+    border-radius: 20rem 0 0 20rem;
+    z-index: -1; /* Ensures the background is behind other content */
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+/* ---------------------- */
+
+
+header{
+    /* width: 100rem; */
+    padding: 2rem 12rem;
+    width: clamp(20rem, 80vw, 100rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.toggle-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+header ul li{
+    margin: 0 1rem;
+}
+
+header ul li a:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+.login-btn{
+    border: 3px solid hsl(0, 94%, 66%);
+    background-color: hsl(0, 94%, 66%);
+    color: white;
+    padding: 0.7rem 2rem;
+    border-radius: 5px;
+    transition: 0.1s all ease-in-out;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:hover{
+    border: 3px solid hsl(0, 94%, 66%);
+    background-color: white;
+}
+
+
+/* ------------------------------------------------ */
+
+main{
+    width: clamp(20rem, 80vw, 100rem);
+    padding: 0 12rem;
+    /* border: 1px solid black; */
+}
+
+section{
+    display: flex;
+    padding: 4rem 0;
+}
+
+.hero{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-text{
+    /* padding: 2rem; */
+    max-width: 30vw;
+    font-size: 1.3rem;
+}
+
+.intro-text h1{
+    font-size: clamp(0.2rem, 3vw, 4rem);
+    /* margin-bottom: 1rem; */
+}
+
+.intro-text p{
+    margin: 3rem 0;
+}
+
+.browser-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: clamp(0.3rem, 1vw, 2rem);
+}
+
+.browser-buttons a{
+    /* width: 15rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    border: 3px solid transparent;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: 0.1s all ease-in-out;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chrome-btn{
+    background: hsl(231, 69%, 60%);
+    color: white;
+}
+
+.chrome-btn:hover{
+    background: white;
+    border: 3px solid hsl(231, 69%, 60%);
+    color: hsl(231, 69%, 60%);
+}
+
+.firefox-btn{
+    background: hsl(0, 0%, 97%);
+    color: black;
+}
+
+.firefox-btn:hover{
+    background: white;
+    border: 3px solid hsl(229, 31%, 21%);
+    color: hsl(229, 31%, 21%);
+}
+
+@media (max-width: 1400px){
+
+    body{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    header{
+        padding: 4rem 2rem 0rem 2rem;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* mobile menu */
+
+    .mobile-menu{
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1000;
+        padding: 4rem 2rem;
+        background: hsl(229, 31%, 21%, 95%);
+    }
+
+    .mobile-menu-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .close-menu-icon{
+        width: 5.5rem;
+        height: 5.5rem;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 5rem 0;
+    }
+
+    .mobile-menu ul li{
+        margin: 1.6rem 0;
+        font-size: 1.6rem;
+    }
+
+    .mobile-menu ul li a{
+        color: white;
+        font-weight: 400;
+    }
+
+    .mobile-login-btn{
+        padding: 0.5rem 8rem;
+        border: 3px solid white;
+        border-radius: 5px;
+    }
+
+    .mobile-menu ul span{
+        background: rgb(255, 255, 255, 0.3);
+        /* width: 100%; */
+        padding: 0 10rem;
+        height: 1px;
+    }
+
+
+    .mobile-socials{
+        justify-self: end;
+        /* align-self: flex-end; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .hide-burger{
+        opacity: 0;
+    }
+
+    .hide-mobile-menu{
+        display: flex;
+        cursor: pointer;
+    }
+
+    .hide-logo{
+        display: none;
+    }
+
+    /* ---------------------- */
+    
+    nav{
+        display: none;
+    }
+    
+    .toggle-menu {
+        display: block;
+        border: none;
+        background: none;
+    }
+
+    .bg-decor{
+        right: 0;
+        height: 50vw;
+        width: 80vw;
+    }
+
+    main{
+        padding: 0 2rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* padding: 2rem 0; */
+    }
+
+    .hero{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero img{
+        width: 100%;
+        height: auto;
+    }
+
+    .intro-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .intro-text h1{
+        font-size: clamp(1rem, 9vw, 4rem);
+        margin-bottom: 1rem;
+    }
+
+    .intro-text p{
+        margin: 1rem 0;
+        font-size: clamp(0.8rem, 5vw, 1.3rem);
+    }
+
+    .browser-buttons{
+        margin: 1rem 0;
+    }
+    
+    .browser-buttons a{
+        /* padding: 1rem 5rem; */
+        font-size: 1rem;
+    }
+}
