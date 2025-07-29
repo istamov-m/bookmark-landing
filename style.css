@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Rubik;
+    /* overflow-x: hidden; */
 }
 
 
@@ -17,7 +22,7 @@ body {
     background-color: hsl(231, 69%, 60%);
     border-radius: 20rem 0 0 20rem;
     z-index: -1; /* Ensures the background is behind other content */
-}
+} 
 
 a{
     text-decoration: none;
@@ -35,8 +40,11 @@ ul{
 
 header{
     /* width: 100rem; */
-    padding: 2rem 12rem;
+    padding: 2rem 2rem;
+    /* max-width: 100rem;
+    width: 100%; */
     width: clamp(20rem, 80vw, 100rem);
+    /* width: 80rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,8 +88,11 @@ header ul li a:hover{
 /* ------------------------------------------------ */
 
 main{
+    /* max-width: 100rem; */
+    /* width: 100%; */
+    /* width: 80em; */
     width: clamp(20rem, 80vw, 100rem);
-    padding: 0 12rem;
+    padding: 0 2rem;
     /* border: 1px solid black; */
 }
 
