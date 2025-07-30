@@ -19,11 +19,28 @@ function toggleMenu() {
   mobileLogo.children[0].children[0].children[1].children[1].setAttribute('fill', '#242A45');
 }
 
-// window.matchMedia('(max-width: 1400px)').addEventListener('change', e => {
-//     isPhone = e.matches;
-//     if (isPhone) {
-//         logo.children[0].children[0].children[0].setAttribute('fill', 'white');
-//     } else{
-//         logo.children[0].children[0].children[0].setAttribute('fill', '#242A45');
-//     }
-// })
+const tabs = document.querySelectorAll('.tab-btn');
+const panels = document.querySelectorAll('.feature-tab');
+const underline = document.querySelector('.underline');
+
+tabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => {
+
+    
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    tabs.forEach(t => t.classList.remove('tab-btn-choosen'));
+    
+    const screenWorker = window.matchMedia('(max-width: 1400px)');
+    if (screenWorker.matches) {
+      tabs[i].classList.add('tab-btn-choosen')
+    }
+
+    panels[i].classList.add('active');
+    
+    const offset = tab.offsetLeft;
+    const width = tab.offsetWidth;
+    underline.style.transform = `translateX(${offset}px)`;
+    underline.style.width = `${width}px`;
+  });
+});
