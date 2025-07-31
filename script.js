@@ -2,7 +2,29 @@ fetch('images/logo-bookmark.svg')
 .then(response => response.text())
 .then(svg => {
   document.getElementById('logo-white').innerHTML = svg;
-})
+  document.getElementById('logo-footer').innerHTML = svg
+});
+
+fetch('images/icon-arrow.svg')
+.then(response => response.text())
+.then(svg => {
+  const arrows = document.querySelectorAll('.arrow');
+  arrows.forEach(arrow => {
+    arrow.innerHTML = svg;
+  });
+});
+
+fetch('images/icon-facebook.svg')
+.then(response => response.text())
+.then(svg => {
+  document.getElementById('logo-facebook') = svg;
+});
+
+fetch('images/icon-twitter.svg')
+.then(response => response.text())
+.then(svg => {
+  document.getElementById('logo-twitter') = svg;
+});
 
 const mobileLogo = document.getElementById('logo-white');
 const mainLogo = document.getElementById('logo');
@@ -44,3 +66,45 @@ tabs.forEach((tab, i) => {
     underline.style.width = `${width}px`;
   });
 });
+
+const questionBtn = document.querySelectorAll('.q-btn');
+const answer = document.querySelectorAll('.answer');
+const arrows = document.querySelectorAll('.arrow');
+
+questionBtn.forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    answer[i].classList.toggle('active-answer');
+
+    arrows[i].classList.toggle('rotate-arrow');
+
+    if(arrows[i].children[0].children[0].contains('stroke="#5267DF"')){
+      arrows[i].children[0].children[0].contains('stroke="#hsl(0, 94%, 66%)"')
+    }
+  })
+});
+
+const email = document.getElementById('email')
+const errorMessage = document.querySelector('.error-p');
+const errorIcon = document.querySelector('.error')
+
+
+function isValidEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+function sendEmail(){
+  if(!isValidEmail(email.value)){
+    email.classList.add('active-error-border');
+    errorMessage.classList.add('active-error');
+    errorIcon.classList.add('active-error');
+  } 
+  else{
+    email.classList.remove('active-error-border');
+    errorMessage.classList.remove('active-error');
+    errorIcon.classList.remove('active-error');
+  }
+}
+
+// const footerLogo = document.getElementById('logo-footer');
+// footerLogo.children[0].children[0].children[1].children[0].setAttribute('fill', 'white');

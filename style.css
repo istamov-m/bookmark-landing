@@ -45,6 +45,7 @@ ul{
 
 p{
     font-size: 1.3rem;
+    color: hsl(229, 31%, 21%, 0.6);
 }
 
 /* ---------------------- */
@@ -174,11 +175,11 @@ section{
     max-width: 40rem;
 }
 
-.features h1{
+.section-head{
     font-size: 2.5rem;
 }
 
-.features p{
+.section-p{
     text-align: center;
     /* max-width: 33vw; */
     margin: 0;
@@ -272,6 +273,235 @@ section{
 
 .active {
     display: flex;
+}
+
+/* Extensions */
+
+.extensions{
+    flex-direction: column;
+    align-items: center;
+    max-width: 40rem;
+    margin-top: 5rem;
+}
+
+.extension-cards{
+    display: flex;
+    justify-content: space-between;
+    width: clamp(15rem, 80vw, 60rem);
+    max-height: 80rem;
+    height: 30rem;
+    margin: 2rem 0;
+}
+
+.extension-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px rgb(0, 0, 0, 0.2);
+    padding: 3rem 1.5rem;
+    align-self: center;
+}
+
+.extension-card:first-child{
+    align-self: flex-start;
+}
+
+.extension-card:last-child{
+    align-self: flex-end;
+}
+
+.extension-card h2{
+    margin: 2rem 0 0 0;
+}
+
+.extension-card p{
+    font-size: 1.1rem;
+    margin: 0.7rem 0 3rem 0;
+}
+
+.bg-dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 17.5rem;
+    width: 100%;
+}
+
+.extension-btn{
+    border: 3px solid hsl(231, 69%, 60%);
+    background-color: hsl(231, 69%, 60%);
+    color: white;
+    padding: 0.7rem 2rem;
+    border-radius: 8px;
+    transition: 0.1s all ease-in-out;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+.extension-btn:hover{
+    background-color: white;
+    color: hsl(231, 69%, 60%);
+}
+
+/* FAQ */
+
+.faq{
+    flex-direction: column;
+    align-items: center;
+    max-width: 40rem;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: clamp(15rem, 50vw, 50rem);
+    margin: 5rem 0;
+}
+
+.question{
+    position: relative;
+}
+
+.separate{
+    height: 1px;
+    width: 100%;
+    background: hsl(229, 31%, 21%, 0.5);
+}
+
+
+.q-btn{
+    display: flex;
+    justify-content: space-between;
+    width: clamp(15rem, 50vw, 45rem);
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    z-index: 999;
+    
+}
+
+.q-btn:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+.answer{
+    display: none;
+    /* transform: translateY(-5rem); */
+    font-weight: 500;
+    width: clamp(15rem, 50vw, 45rem);
+    /* max-height: 0; */
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    z-index: 0;
+}
+
+.rotate-arrow{
+    transform: rotate(180deg);
+}
+
+.active-answer{
+    display: block;
+}
+
+footer{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    /* border: 1px solid black; */
+    color: white;
+}
+
+.footer-first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background-color: hsl(231, 69%, 60%);
+    padding: 2rem 2rem;
+}
+
+.footer-first h3{
+    font-weight: 400;
+}
+
+.footer-first h1{
+    font-size: clamp(0.2rem, 3vw, 4rem);
+    max-width: 40rem;
+    text-align: center;
+}
+
+.email{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 40rem;
+    width: clamp(20rem, 80vw, 100rem);
+}
+
+.email-pref{
+    position: relative;
+}
+
+.email-input{
+    font-size: 1.3rem;
+    padding: 1rem 1.8rem;
+    border-radius: 5px;
+    border: 4px solid transparent;
+}
+
+.error{
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 1.2rem;
+}
+
+.error-p{
+    display: none;
+    font-size: 1rem;
+    font-style: italic;
+    color: white;
+    margin: 0;
+    padding: 0 0 0 5px;
+    background: hsl(0, 94%, 66%);
+    transform: translateY(-5px);
+
+}
+
+.contact-btn{
+    border: 4px solid hsl(0, 94%, 66%);
+    background-color: hsl(0, 94%, 66%);
+    color: white;
+    padding: 0.9rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: 0.1s all ease-in-out;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.contact-btn:hover{
+    background-color: white;
+    color: hsl(0, 94%, 66%);
+}
+
+.active-error-border{
+    border: 4px solid hsl(0, 94%, 66%);
+}
+
+.active-error{
+    display: block;
+}
+
+/* second footer */
+
+.footer-second{
+    background-color: hsl(229, 31%, 21%);
 }
 
 @media (max-width: 1400px){
@@ -480,6 +710,12 @@ section{
         height: auto;
     }
 
+    .section-head{
+        font-size: clamp(1rem, 6vw, 4rem);
+        text-align: center;
+    }
+
+
     .feature-tab div h1{
         font-size: clamp(1rem, 7vw, 4rem);
     }
@@ -494,5 +730,80 @@ section{
 
     .more-info-btn{
         display: none;
+    }
+
+    /* extensions */
+
+    .extension-cards{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .extension-card{
+        margin: 1rem 0;
+    }
+
+    .extension-card:first-child, .extension-card:last-child{
+        align-self: center;
+    }
+
+    .btn-text-responsive{
+        /* font-size: clamp(0.6rem, 1vw, 2rem); */
+    }
+
+    /* FAQ */
+
+    .questions, .q-btn, .answer{
+        width: clamp(18rem, 55vw, 45rem);
+    }
+
+
+    .q-btn{
+        font-size: clamp(0.7rem, 6vw, 1.3rem);
+        padding: 1.3rem 0;
+    }
+
+    .answer{
+        text-align: start;
+    }
+
+    .questions.more-info-btn{
+        display: block;
+    }
+
+    /* footer */
+
+    .footer-first h1{
+        font-size: clamp(1rem, 7vw, 4rem);
+    }
+
+
+    .email{
+        flex-direction: column;
+        height: 10rem;
+    }
+
+    .email-pref{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email-input{
+        width: 90%;
+    }
+
+    
+    .error{
+        right: 25px;
+    }
+    
+    .error-p{
+        width: 90%;
+    }
+
+    .contact-btn{
+        padding: 1rem 6rem;
     }
 }

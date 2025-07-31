@@ -85,8 +85,8 @@
     </section>
 
     <section class="features">
-      <h1>Features</h1>
-      <p>Our aim is to make it quick and easy for you to access your favourite websites. 
+      <h1 class="section-head">Features</h1>
+      <p class="section-p">Our aim is to make it quick and easy for you to access your favourite websites. 
         Your bookmarks sync between your devices so you can access them on the go.</p>
 
       <div class="feature-list">
@@ -106,7 +106,7 @@
             <div>
               <h1>Bookmark in one click</h1>
               <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-              <a href="#" class="more-info-btn">More Info</a>
+              <a href="#" class="more-info-btn btn-text-responsive">More Info</a>
             </div>
           </div>
 
@@ -115,7 +115,7 @@
             <div>
               <h1>Intelligent search</h1>
               <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-              <a href="#" class="more-info-btn">More Info</a>
+              <a href="#" class="more-info-btn btn-text-responsive">More Info</a>
             </div>
           </div>
 
@@ -124,7 +124,7 @@
             <div>
               <h1>Share your bookmarks</h1>
               <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-              <a href="#" class="more-info-btn">More Info</a>
+              <a href="#" class="more-info-btn btn-text-responsive">More Info</a>
             </div>
           </div>
 
@@ -132,7 +132,107 @@
 
       </div>
     </section>
+
+    <section class="extensions">
+      <h1 class="section-head">Download the extension</h1>
+      <p class="section-p">We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+          got a favourite you’d like us to prioritize.</p>
+
+      <div class="extension-cards">
+
+        <div class="extension-card">
+          <img width="120" height="120" src="images/logo-chrome.svg" alt="chrome extension">
+          <h2>Add to Chrome</h2>
+          <p>Minimum version 62</p>
+          <img class="bg-dots" src="images/bg-dots.svg" alt="">
+          <a class="extension-btn btn-text-responsive" href="#">Add & Install extension</a>
+        </div>
+
+        <div class="extension-card">
+          <img width="120" height="120" src="images/logo-firefox.svg" alt="chrome extension">
+          <h2>Add to Firefox</h2>
+          <p>Minimum version 55</p>
+          <img class="bg-dots" src="images/bg-dots.svg" alt="">
+          <a class="extension-btn btn-text-responsive" href="#">Add & Install extension</a>
+        </div>
+
+        <div class="extension-card">
+          <img width="120" height="120" src="images/logo-opera.svg" alt="chrome extension">
+          <h2>Add to Opera</h2>
+          <p>Minimum version 46</p>
+          <img class="bg-dots" src="images/bg-dots.svg" alt="">
+          <a class="extension-btn btn-text-responsive" href="#">Add & Install extension</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="faq">
+      <h1 class="section-head">Frequently Asked Questions</h1>
+      <p class="section-p">Here are some of our FAQs. If you have any other questions you’d like 
+        answered please feel free to email us.</p>
+        
+        <div class="questions">
+        <span class="separate"></span>
+        <div class="question">
+          <button class="q-btn">What is Bookmark? <span class="arrow"></span></button>
+          <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+        </div>
+        <span class="separate"></span>
+        <div class="question">
+          <button class="q-btn">How can I request a new browser? <span class="arrow"></span></button>
+          <p class="answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+        </div>
+        <span class="separate"></span>
+         <div class="question">
+          <button class="q-btn">Is there a mobile app? <span class="arrow"></span></button>
+          <p class="answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+            sollicitudin ex et ultricies bibendum.</p>
+        </div>
+        <span class="separate"></span>
+         <div class="question">
+          <button class="q-btn">What about other Chromium browsers? <span class="arrow"></span></button>
+          <p class="answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+            vitae neque eget nisl gravida pellentesque non ut velit.</p>
+        </div>
+        <span class="separate"></span>
+      </div>
+
+      <a class="more-info-btn" href="#">More Info</a>
+    </section>
   </main>
+
+  <footer>
+    <section class="footer-first">
+      <h3>35,000+ already joined</h3>
+      <h1>Stay up-to-date with what we’re doing</h1>
+      <div class="email">
+        <div class="email-pref">
+            <img class="error" src="images/icon-error.svg" alt="error icon">
+            <input id="email" class="email-input" type="email" placeholder="Enter your email address">
+            <p class="error-p">Whoops, make sure it's an email</p>
+        </div>
+        <button onclick="sendEmail()" class="contact-btn">Contact us</button>
+      </div>
+    </section>
+
+    <section class="footer-second">
+      <span id="logo-footer"></span>
+      <ul>
+        <li>FEATURES</li>
+        <li>PRICING</li>
+        <li>CONTACT</li>
+      </ul>
+      <div>
+        <span id="logo-facebook"></span>
+        <span id="logo-twitter"></span>
+      </div>
+    </section>
+  </footer>
 
   <script src="script.js"></script>
 
