@@ -17,7 +17,7 @@ body {
     width: 40rem;
     height: 25rem;
     background-color: hsl(231, 69%, 60%);
-    z-index: -1; /* Ensures the background is behind other content */
+    z-index: -1;
 } 
 
 .bg-decor-main{
@@ -52,12 +52,8 @@ p{
 
 
 header{
-    /* width: 100rem; */
     padding: 2rem 2rem;
-    /* max-width: 100rem;
-    width: 100%; */
     width: clamp(20rem, 80vw, 100rem);
-    /* width: 80rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,7 +177,6 @@ section{
 
 .section-p{
     text-align: center;
-    /* max-width: 33vw; */
     margin: 0;
 }
 
@@ -203,8 +198,6 @@ section{
     align-items: center;
     justify-content: space-between;
     padding: 0;
-    /* margin-left: 1rem; */
-    /* border: 1px solid hsl(229, 31%, 21%); */
     width: 50rem;
     margin: 0;
     font-size: 1.3rem;
@@ -216,7 +209,6 @@ section{
     width: 100%;
     text-align: center;
     cursor: pointer;
-    /* border: 1px solid transparent; */
 }
 
 .tab-buttons li:hover{
@@ -224,11 +216,8 @@ section{
 }
 
 .underline{
-    /* position: absolute; */
     background: hsl(0, 94%, 66%);
     height: 3px;
-    padding: 0 8rem;
-    /* display: none; */
     width: 16rem;
     transition: 0.1s all;
     transform: translateX(0);
@@ -356,7 +345,6 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid black; */
     width: clamp(15rem, 50vw, 50rem);
     margin: 5rem 0;
 }
@@ -391,10 +379,8 @@ section{
 
 .answer{
     display: none;
-    /* transform: translateY(-5rem); */
     font-weight: 500;
     width: clamp(15rem, 50vw, 45rem);
-    /* max-height: 0; */
     font-size: 1.2rem;
     line-height: 1.7rem;
     z-index: 0;
@@ -410,10 +396,15 @@ section{
 
 footer{
     position: relative;
+    right: 0;
+    left: 0;
     max-width: 100%;
     width: 100%;
-    /* border: 1px solid black; */
     color: white;
+}
+
+.footer-first, .footer-second{
+    padding: 2rem 2rem;
 }
 
 .footer-first{
@@ -422,7 +413,6 @@ footer{
     align-items: center;
     border: 1px solid black;
     background-color: hsl(231, 69%, 60%);
-    padding: 2rem 2rem;
 }
 
 .footer-first h3{
@@ -440,7 +430,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     max-width: 40rem;
-    width: clamp(20rem, 80vw, 100rem);
+    width: 32rem;
 }
 
 .email-pref{
@@ -452,6 +442,7 @@ footer{
     padding: 1rem 1.8rem;
     border-radius: 5px;
     border: 4px solid transparent;
+    outline: none;
 }
 
 .error{
@@ -501,10 +492,41 @@ footer{
 /* second footer */
 
 .footer-second{
+    align-items: center;
     background-color: hsl(229, 31%, 21%);
+    padding: 2rem 12rem;
+}
+
+.footer-second ul{
+    justify-content: space-between;
+    padding: none;
+}
+
+.footer-second ul li{
+    padding: none;
+    margin: 0 2rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.footer-second ul li:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+.socials-footer{
+    margin-left: auto;
+}
+
+.socials-footer a{
+    margin: 0 1rem;
 }
 
 @media (max-width: 1400px){
+
+    .no-scroll{
+        overflow: hidden;
+        height: 100vh;
+    }
 
     body{
         display: block;
@@ -617,7 +639,6 @@ footer{
     }
 
     .bg-decor-main, .bg-decor-features{
-        /* right: 0; */
         height: 50vw;
         width: 80vw;
     }
@@ -641,7 +662,6 @@ footer{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* padding: 2rem 0; */
     }
 
     .hero{
@@ -678,8 +698,8 @@ footer{
     }
     
     .browser-buttons a{
-        /* padding: 1rem 5rem; */
-        font-size: 1rem;
+        padding: 1rem 0.2rem;
+        font-size: clamp(0.4rem, 4vw, 1.3rem);
     }
 
     /* Features */
@@ -748,10 +768,6 @@ footer{
         align-self: center;
     }
 
-    .btn-text-responsive{
-        /* font-size: clamp(0.6rem, 1vw, 2rem); */
-    }
-
     /* FAQ */
 
     .questions, .q-btn, .answer{
@@ -760,7 +776,8 @@ footer{
 
 
     .q-btn{
-        font-size: clamp(0.7rem, 6vw, 1.3rem);
+        font-size: clamp(1rem, 3.2vw, 1.3rem);
+        font-weight: 700;
         padding: 1.3rem 0;
     }
 
@@ -782,6 +799,7 @@ footer{
     .email{
         flex-direction: column;
         height: 10rem;
+        width: clamp(19rem, 40vw, 30rem);
     }
 
     .email-pref{
@@ -805,5 +823,28 @@ footer{
 
     .contact-btn{
         padding: 1rem 6rem;
+    }
+
+    /* footer second */
+
+    .footer-second{
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .footer-second ul{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 2rem 0;
+    }
+
+    .footer-second ul li{
+        margin: 1.3rem 0;
+    }
+
+    .socials-footer{
+        margin: 0;
     }
 }

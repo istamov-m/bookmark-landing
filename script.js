@@ -2,7 +2,8 @@ fetch('images/logo-bookmark.svg')
 .then(response => response.text())
 .then(svg => {
   document.getElementById('logo-white').innerHTML = svg;
-  document.getElementById('logo-footer').innerHTML = svg
+  document.getElementById('logo-footer').innerHTML = svg;
+  document.getElementById('logo-footer').children[0].children[0].children[0].setAttribute('fill', '#fff');
 });
 
 fetch('images/icon-arrow.svg')
@@ -17,24 +18,43 @@ fetch('images/icon-arrow.svg')
 fetch('images/icon-facebook.svg')
 .then(response => response.text())
 .then(svg => {
-  document.getElementById('logo-facebook') = svg;
+  document.getElementById('logo-facebook').innerHTML = svg;
+  const facebookLogo = document.getElementById('logo-facebook');
+  facebookLogo.addEventListener('mouseover', () => {
+    facebookLogo.children[0].children[0].setAttribute('fill', 'hsl(0, 94%, 66%)')
+  })
+
+  facebookLogo.addEventListener('mouseout', () => {
+    facebookLogo.children[0].children[0].setAttribute('fill', '#fff')
+  })
 });
 
 fetch('images/icon-twitter.svg')
 .then(response => response.text())
 .then(svg => {
-  document.getElementById('logo-twitter') = svg;
+  document.getElementById('logo-twitter').innerHTML = svg;
+  const twitterLogo = document.getElementById('logo-twitter');
+  twitterLogo.addEventListener('mouseover', () => {
+    twitterLogo.children[0].children[0].setAttribute('fill', 'hsl(0, 94%, 66%)')
+  })
+
+  twitterLogo.addEventListener('mouseout', () => {
+    twitterLogo.children[0].children[0].setAttribute('fill', '#fff')
+  })
 });
+
 
 const mobileLogo = document.getElementById('logo-white');
 const mainLogo = document.getElementById('logo');
 const mobileMenu = document.querySelector('.mobile-menu');
 const burger = document.querySelector('.burger');
+const noScroll = document.getElementsByTagName('body');
 
 function toggleMenu() {
   mobileMenu.classList.toggle('hide-mobile-menu');
   burger.classList.toggle('hide-burger');
   mainLogo.classList.toggle('hide-logo');
+  noScroll[0].classList.toggle('no-scroll')
 
   mobileLogo.children[0].children[0].children[0].setAttribute('fill', 'white');
   mobileLogo.children[0].children[0].children[1].children[0].setAttribute('fill', 'white');
@@ -105,6 +125,3 @@ function sendEmail(){
     errorIcon.classList.remove('active-error');
   }
 }
-
-// const footerLogo = document.getElementById('logo-footer');
-// footerLogo.children[0].children[0].children[1].children[0].setAttribute('fill', 'white');
